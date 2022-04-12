@@ -21,6 +21,7 @@
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
 
+            /*
             List<Student> studentList = new List<Student>();
             studentList.Add( new Student() { StudLRN = "123456220000", FullName = "Jaira Mae De Dios", StudCourse="BSIT", StudSection="A", StudYear=1 } );
             studentList.Add( new Student() { StudLRN = "123456220001", FullName = "Jack Defensor", StudCourse = "BSPA", StudSection = "C", StudYear = 3 } );
@@ -31,7 +32,7 @@
                 context.Student.Add(student);
             }
 
-            base.Seed(context);
+            base.Seed(context); */
         }
     }
 }
