@@ -10,7 +10,7 @@ namespace FnetMvcUniversity.Models
     {
         public FnetMvcUniDbContext() : base("DefaultConnection")
         {
-
+            Database.SetInitializer( new MigrateDatabaseToLatestVersion<FnetMvcUniDbContext, Migrations.Configuration>("DefaultConnection") );
         }
 
         public DbSet<Student> Student { get; set; }
