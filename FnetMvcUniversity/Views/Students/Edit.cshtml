@@ -4,13 +4,17 @@
 }
 @model FnetMvcUniversity.Models.Student
 
-<form method="post">
-    <div class="border p-3">
-        <div class="form-group row">
-            <h2 class="text-info pl-3">
-                <i class="fa-solid fa-pen"></i> Edit Student
-            </h2>
-        </div>
+    
+<div class="border p-3">
+    <div class="form-group row">
+        <h2 class="text-info pl-3">
+            <i class="fa-solid fa-pen"></i> Edit Student
+        </h2>
+    </div>
+    <!-- Start BeginForm -->
+    @using (Html.BeginForm())
+    {
+
         @Html.AntiForgeryToken()
         <div class="form_fields">
             <div class="row form-group fgr-field">
@@ -39,7 +43,7 @@
                     @Html.ValidationMessageFor(Model => Model.StudCourse)
                 </div>
             </div>
-           
+
             <div class="row form-group fgr-field">
                 <div class="col-4">
                     @Html.LabelFor(Model => Model.StudYear)
@@ -48,11 +52,11 @@
                     @{
                         var schoolYearOpts = new SelectList(
                             new List<SelectListItem> {
-                                new SelectListItem {Text = "1st Year", Value = "1"},
-                                new SelectListItem {Text = "2nd Year", Value = "2"},
-                                new SelectListItem {Text = "3rd Year", Value = "3"},
-                                new SelectListItem {Text = "4th Year", Value = "4"},
-                            }, "Value", "Text");
+                            new SelectListItem {Text = "1st Year", Value = "1"},
+                            new SelectListItem {Text = "2nd Year", Value = "2"},
+                            new SelectListItem {Text = "3rd Year", Value = "3"},
+                            new SelectListItem {Text = "4th Year", Value = "4"},
+                    }, "Value", "Text");
                     }
 
                     @Html.DropDownListFor(Model => Model.StudYear, schoolYearOpts, "--Select--", new { @class = "form-control" })
@@ -77,12 +81,11 @@
                         <input type="submit" name="update-student" class="btn btn-info w-100" value="Update Student" />
                     </div>
                     <div class="col">
-                        @Html.ActionLink("Back", "Index", null, new { @class="btn btn-primary" })
+                        @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-primary" })
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</form>
-
-
+    }
+    <!-- End of BeginForm -->
+</div>
