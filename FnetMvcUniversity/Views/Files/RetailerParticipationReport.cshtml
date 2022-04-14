@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "RetailerParticipationReport";
+}
+
+@using (Html.BeginForm())
+{
+<div class="form-fields">
+    <div class="row form-group fgr-field">
+        <div class="col-md-4">
+            <label>Report Type</label>
+        </div>
+        <div class="col-md-8">
+            @{
+                var reportTypeOpt = new SelectList(new List<SelectListItem> {
+                        new SelectListItem { Text = "All retailer format", Value = "Format 1"},
+                        new SelectListItem { Text = "Per retailer format", Value = "Format 2" },
+                        new SelectListItem { Text = "Custom per retailer format", Value = "Format 3" }
+                    }, "Value", "Text");
+            }
+
+            @Html.DropDownList("retailer-report-type", reportTypeOpt, "-- Select --", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="row form-group fgr-field">
+        <div class="col-md-4">
+            <label>Platform Client</label>
+        </div>
+        <div class="col-md-8">
+            @{
+                var reportClientOpt = new SelectList(new List<SelectListItem> {
+                        new SelectListItem { Text = "LEE", Value = "LEE"},
+                        new SelectListItem { Text = "ENE", Value = "ENE" },
+                        new SelectListItem { Text = "MIC", Value = "MIC" }
+                    }, "Value", "Text");
+            }
+
+            @Html.DropDownList("retailer-platform-client", reportClientOpt, "-- Select --", new { @class = "form-control" })
+        </div>
+    </div>
+</div>
+}
+<script type="text/javascript">
+    $(function () {
+        $('#retailer-report-type').change(function () {
+
+        });
+    });
+</script>

@@ -239,7 +239,7 @@
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Delete.cshtml" />
     <None Include="T4MVC.tt.hooks.t4" />
-    <Content Include="Views\Files\RetailerParticipationRepor.cshtml" />
+    <Content Include="Views\Files\RetailerParticipationReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202204110740474_initDb.resx">

@@ -52,7 +52,7 @@
                 <div class="modal-header bg-custom">
                     <h5 class="modal-title" id="RetailerParticipationReportDownloadModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">[&times;]</span>
                     </button>
                 </div>
                 <div class="modal-body" id="RetailerParticipationReportDownloadModalContent">
@@ -76,7 +76,7 @@
 
     //For Retailer Participation Report
     function OpenRetailerParticipationReportSearch() {
-        $.get('@Url.Action("RetailerParticipationRepor", "Files")')
+        $.get('@Url.Action("RetailerParticipationReport", "Files")')
             .then(function (data) {
                 /* $("#RetailerParticipationReportDownloadModal").modal({
                     backdrop: 'static',

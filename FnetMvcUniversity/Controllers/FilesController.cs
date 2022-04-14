@@ -14,7 +14,7 @@ namespace FnetMvcUniversity.Controllers
             return View();
         }
 
-        public ActionResult RetailerParticipationRepor() {
+        public ActionResult RetailerParticipationReport() {
             return PartialView();
         }
     }
